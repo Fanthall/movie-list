@@ -1,13 +1,32 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	width: 100% !important;
+	height: 100% !important;
+}
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	width: 100% !important;
+	height: 100% !important;
+	display: flex !important;
+	flex-direction: row !important;
+	justify-content: center !important;
+	align-items: center !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+	width: 100% !important;
+	height: 100% !important;
 }
+
+.min-h-500 {
+	min-height: 500px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* npx tailwindcss -i ./input.css -o ./dist/output.css --watch */

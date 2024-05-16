@@ -1,16 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { NextUIProvider } from "@nextui-org/react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./App";
+import "./dist/output.css";
+import reportWebVitals from "./reportWebVitals";
+import Store from "./store/store";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<Provider store={Store}>
+		<React.StrictMode>
+			<NextUIProvider className="w-full h-full">
+				<main className="w-full h-full dark text-foreground bg-background">
+					<App />
+				</main>
+			</NextUIProvider>
+		</React.StrictMode>
+	</Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
